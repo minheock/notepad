@@ -18,6 +18,12 @@ menu.add_cascade(label='파일', menu=menu_1)
 menu_2 = Menu(menu, tearoff=0)
 menu_2.add_command(label='min')
 menu.add_cascade(label='만든이', menu=menu_2)
-window.config(menu=menu)
 
+text_area = Text(window)
+window.grid_rowconfigure(0, weight=1)
+window.grid_columnconfigure(0, weight=1)
+text_area.grid(sticky= N + E + S + W)
+
+
+window.config(menu=menu)
 window.mainloop()
